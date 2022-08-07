@@ -31,8 +31,8 @@ jobs:
         run: terraform init 
       - name: Terraform Plan
         id: plan
-        run: |
-          terraform plan -input=false -no-color
+        if: github.event_name == 'push'
+        run: terraform plan -no-color
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         id: apply
