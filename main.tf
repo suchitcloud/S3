@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "b" {
   bucket = "my-tf-test-bucket-suchit"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "My buckett"
     Environment = "Dev"
   }
 }
