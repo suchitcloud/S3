@@ -20,15 +20,15 @@ jobs:
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          AWS_DEFAULT_REGION: us-east-1
     steps:
-      - uses: actions/checkout@v2
-      - uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_wrapper: false
+      -  name: checkout
+         uses: actions/checkout@v2
+      
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        
       - name: Terraform Init
         id: init
-        run: |
-           rm -rf .terraform
-           terraform init -backend-config=backend.tfvars -upgrade=true -no-color -input=false
+        run: terraform init 
       - name: Terraform Plan
         id: plan
         run: |
