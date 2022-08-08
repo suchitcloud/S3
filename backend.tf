@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "tf-backend-gitaction"
-   # key    = "path/to/my/key"
+    key    = "tf-backend-gitaction.tfstate"
     region = "us-east-1"
   }
 }
