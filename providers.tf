@@ -7,9 +7,11 @@ terraform {
       source  = "hashicorp/aws"
     }
     
-    
+provider {
+  aws = {
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: us-east-1
+    }
   }
 }
