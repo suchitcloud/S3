@@ -36,11 +36,11 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         id: apply
-        run: terraform apply -auto-approve -input=false 
+        run: terraform apply -auto-approve -input=false -lock=false
       - name: Terraform destroy
         if: github.ref == 'refs/heads/destroy'
         id: destroy
-        run: terraform destroy -auto-approve -input=false -lock=false
+        run: terraform destroy -auto-approve -input=false
   comment:
     runs-on: ubuntu-latest
     needs: terraform
