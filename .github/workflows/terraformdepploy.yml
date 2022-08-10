@@ -1,14 +1,3 @@
-permissions:
-  contents:      read
-  id-token:      write
-  issues:        write
-  pull-requests: write
-
-- name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@master
-        with:
-          role-to-assume: arn:aws:iam::824584691035:role/github-action-role
-          aws-region: us-east-1
 
 name: Continuous Delivery
 
