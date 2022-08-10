@@ -35,6 +35,7 @@ steps:
         with:
                role-to-assume: arn:aws:iam::824584691035:role/github-action-role
                aws-region: us-east-1
+               role-session-name: MySessionName
       
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
