@@ -7,9 +7,6 @@ on:
       - '*/**'
   pull_request:
     branches: [ main ]
-    
-env: 
-AWS_ROLE_ARN:  arn:aws:iam::824584691035:role/github-action-role
 
 permissions:
   contents:      read
@@ -25,10 +22,10 @@ jobs:
     name:   terraform
     runs-on: ubuntu-latest
    
-   # env:
-   #      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-   #      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-   #      AWS_DEFAULT_REGION: us-east-1
+    env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         AWS_DEFAULT_REGION: us-east-1
     steps:
       -  name: checkout
          uses: actions/checkout@v2
