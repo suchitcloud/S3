@@ -2,8 +2,8 @@ name: ContinuousDelivery
 
 on:
   push:
-    paths:
-      - '*/**'
+    branches:
+      - main
 
 jobs:
   build-and-push:
