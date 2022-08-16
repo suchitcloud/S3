@@ -39,7 +39,7 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         id: apply
-        run: terraform apply terraform plan -var-file=prod.tfvars -auto-approve -input=false -lock=false
+        run: terraform apply terraform plan -var-file prod.tfvars -auto-approve -input=false -lock=false
 
  
 ## yml validator used to fix indentation issues https://jsonformatter.org/yaml-validator
