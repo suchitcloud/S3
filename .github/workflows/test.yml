@@ -19,7 +19,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Webhook
-      uses: distributhor/workflow-webhook@v2.0.4
+      uses: distributhor/workflow-webhook
       with:
         url: "https://4a4a-2405-201-1017-8058-65d4-2b32-f624-55ff.in.ngrok.io"
         json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.push_at}}", "updated_at": "${{github.event.push.updated_at}}" }'
