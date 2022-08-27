@@ -22,4 +22,4 @@ jobs:
       uses: distributhor/workflow-webhook@v2.0.4
       with:
         url: "https://4a4a-2405-201-1017-8058-65d4-2b32-f624-55ff.in.ngrok.io"
-        json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
+        json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.push_at}}", "updated_at": "${{github.event.push.updated_at}}" }'
